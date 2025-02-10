@@ -341,5 +341,22 @@ This structure ensures that the AMPEL-360XWLRGA system can be maintained efficie
 ---
 
 *Fonte: GitHub release page*
-```
 
+
+**VIDEO PROMPT**
+
+  📍  📍 This video provides a step-by-step guide for certified maintenance technicians on how to safely remove and install the Vacuum Pump System in the QPS-01 engine, located within Zone 100.   📍 Always refer to the QPS-01 Maintenance Manual, document GPAM-AMPEL-0201-71-003-A, for complete procedures and specifications.
+
+  📍 Only certified QPS-01 Engine Maintenance Technicians are qualified to perform this procedure. Ensure you have all the necessary tools and equipment prepared, as listed in Section 4.1 of the QPS-01 Maintenance Manual and the Illustrated Parts Breakdown.
+
+  📍 Safety is paramount. WARNING: Before starting any work, ensure the aircraft's main power supply is completely de-energized and locked out using approved Lockout/Tagout procedures.   📍 Follow these critical Lockout/Tagout steps: Step 1: Identify the power source. Step 2: Apply a Lockout device.   📍 Step 3: Visually VERIFY zero voltage at designated test points using a multimeter.   📍 Always wear appropriate Personal Protective Equipment, including safety glasses and insulated gloves.   📍 Refer to Section 5 of the Maintenance Manual and the AMPEL360XWLRGA Aircraft Maintenance Manual for complete safety guidelines.
+
+  📍 Step 1: Preparation. Begin by verifying the aircraft's main power supply is de-energized and locked out. Allow sufficient time for the engine to cool down completely, ensuring vacuum pressure is equalized. Gather all necessary tools and equipment as listed.   📍 Ensure your maintenance area is clean and free of obstructions. Finally, don your appropriate Personal Protective Equipment.
+
+  📍 Step 4: Installation. Carefully position the new vacuum pump into its mounting location, ensuring proper orientation.   📍 Remember to always handle the pump with both hands to prevent accidental drops or sudden shifts.   📍 If applicable, ensure you are following ESD-safe practices, using ESD-safe gloves and grounding straps when handling the new pump and electrical connectors. Secure the pump to the engine frame by reinstalling the mounting hardware.   📍 Micro-Reminder: Hand-tighten fasteners first before using the torque wrench.   📍 Tighten fasteners to the specified torque – for example, 15 Newton-meters,   📍 but always refer to Document GPAM-AMPEL-0201-71-003-A, the Component Installation Manual, for precise torque values.   📍 Reconnect the vacuum lines, ensuring tight, leak-free connections. Finally, reconnect all electrical connectors, carefully matching your labels from the disconnection step and ensuring they are securely fastened.
+
+  📍 Step 5: Post-Installation. Thoroughly inspect the installed pump for any signs of damage. Open the isolation valves on the vacuum lines. Reinstall all access panels that were removed. Connect a vacuum gauge to the designated test port and verify correct vacuum system operation according to specifications.   📍 Finally, meticulously record the vacuum pump removal and installation in the aircraft maintenance logbook.
+
+  📍 To ensure a successful installation, verify the following acceptance criteria are met: First, the Vacuum pump is securely mounted. Second, all vacuum connections are secure and leak-free.   📍 Third, electrical connections are correctly reconnected and secure. Fourth, the vacuum system achieves specified vacuum levels. Fifth, the pump functions correctly as indicated by FADEC diagnostics.   📍 And finally, no damage or leaks are detected upon final inspection.
+
+This video provides a general overview.   📍 Always consult the QPS-01 Maintenance Manual, document GPAM-AMPEL-0201-71-003-A, for complete technical specifications, detailed procedures, and the latest safety information.   📍 For quick access, scan the QR code on screen to directly access the manual.   📍 Remember, safety is always the top priority in all maintenance operations. Subtitles and captions are available and strongly recommended to enhance clarity and accessibility.
