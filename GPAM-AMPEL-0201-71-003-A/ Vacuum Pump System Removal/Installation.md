@@ -343,20 +343,123 @@ This structure ensures that the AMPEL-360XWLRGA system can be maintained efficie
 *Fonte: GitHub release page*
 
 
-**VIDEO PROMPT**
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aircraft Visualization</title>
+    <script src="https://openjscad.org/js/csg.js"></script>
+    <script src="https://openjscad.org/js/formats.js"></script>
+    <script src="https://openjscad.org/js/openjscad.js"></script>
+    <script src="https://openjscad.org/js/lightgl.js"></script>
+    <script src="https://openjscad.org/js/sylvester.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <style>
+        #viewer {
+            width: 800px;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div id="viewer"></div>
+    <button onclick="exportSTL()">Export as STL</button>
+    <button onclick="exportSTEP()">Export as STEP</button>
+     <button onclick="exportDXF()">Export as DXF</button>
+    <script>
+    const { OpenJsCad, OpenJsCadViewer } = require('@jscad/core');
+    const { convertToBlob } = require('@jscad/core');
+    const { stlSerializer, stpSerializer, dxfSerializer } = require('@jscad/io');
+    let gProcessor;
 
-  📍  📍 This video provides a step-by-step guide for certified maintenance technicians on how to safely remove and install the Vacuum Pump System in the QPS-01 engine, located within Zone 100.   📍 Always refer to the QPS-01 Maintenance Manual, document GPAM-AMPEL-0201-71-003-A, for complete procedures and specifications.
+    async function main() {
+      try {
+        const response = await fetch("aircraft_points.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
 
-  📍 Only certified QPS-01 Engine Maintenance Technicians are qualified to perform this procedure. Ensure you have all the necessary tools and equipment prepared, as listed in Section 4.1 of the QPS-01 Maintenance Manual and the Illustrated Parts Breakdown.
+        // --- Data Validation ---
+        if (!Array.isArray(data)) {
+          throw new Error("Data must be an array.");
+        }
+        for (const pt of data) {
+          if (!pt.id || typeof pt.id !== 'string') {
+            throw new Error("Each point must have a string 'id'.");
+          }
+          if (typeof pt.x !== 'number' || typeof pt.y !== 'number' || typeof pt.z !== 'number') {
+            throw new Error(`Point ${pt.id} has invalid coordinates.`);
+          }
+          // Add more validation as needed (e.g., coordinate ranges)
+        }
+        // Check uniqueness
+        const ids = data.map(point => point.id)
+        if(ids.length !== new Set(ids).size) {
+            throw new Error(`Point Ids are not unique`);
+        }
+        // --- End Data Validation ---
+        const points = data;
+        const connections = [
+           ["C11", "C21"],
+           ["C21", "C31"],
+        ];
+        let geometry = points.map(pt => translate([pt.x, pt.y, pt.z], sphere({r:0.05})));
 
-  📍 Safety is paramount. WARNING: Before starting any work, ensure the aircraft's main power supply is completely de-energized and locked out using approved Lockout/Tagout procedures.   📍 Follow these critical Lockout/Tagout steps: Step 1: Identify the power source. Step 2: Apply a Lockout device.   📍 Step 3: Visually VERIFY zero voltage at designated test points using a multimeter.   📍 Always wear appropriate Personal Protective Equipment, including safety glasses and insulated gloves.   📍 Refer to Section 5 of the Maintenance Manual and the AMPEL360XWLRGA Aircraft Maintenance Manual for complete safety guidelines.
+        const lookupPoint = (id) => {
+            const point = points.find(p => p.id === id);
+            if (!point) {
+                console.error(`Point with ID "${id}" not found.`);
+                return null; // Or throw an error, depending on your error handling strategy
+            }
+            return [point.x, point.y, point.z];
+        };
 
-  📍 Step 1: Preparation. Begin by verifying the aircraft's main power supply is de-energized and locked out. Allow sufficient time for the engine to cool down completely, ensuring vacuum pressure is equalized. Gather all necessary tools and equipment as listed.   📍 Ensure your maintenance area is clean and free of obstructions. Finally, don your appropriate Personal Protective Equipment.
+        const lines = connections.map( connection => {
+            const p1 = lookupPoint(connection[0], points);
+            const p2 = lookupPoint(connection[1], points);
+            return hull(translate(p1, sphere({r: 0.05})), translate(p2, sphere({r: 0.05})));
+        });
 
-  📍 Step 4: Installation. Carefully position the new vacuum pump into its mounting location, ensuring proper orientation.   📍 Remember to always handle the pump with both hands to prevent accidental drops or sudden shifts.   📍 If applicable, ensure you are following ESD-safe practices, using ESD-safe gloves and grounding straps when handling the new pump and electrical connectors. Secure the pump to the engine frame by reinstalling the mounting hardware.   📍 Micro-Reminder: Hand-tighten fasteners first before using the torque wrench.   📍 Tighten fasteners to the specified torque – for example, 15 Newton-meters,   📍 but always refer to Document GPAM-AMPEL-0201-71-003-A, the Component Installation Manual, for precise torque values.   📍 Reconnect the vacuum lines, ensuring tight, leak-free connections. Finally, reconnect all electrical connectors, carefully matching your labels from the disconnection step and ensuring they are securely fastened.
+        return union(geometry, lines);
 
-  📍 Step 5: Post-Installation. Thoroughly inspect the installed pump for any signs of damage. Open the isolation valves on the vacuum lines. Reinstall all access panels that were removed. Connect a vacuum gauge to the designated test port and verify correct vacuum system operation according to specifications.   📍 Finally, meticulously record the vacuum pump removal and installation in the aircraft maintenance logbook.
 
-  📍 To ensure a successful installation, verify the following acceptance criteria are met: First, the Vacuum pump is securely mounted. Second, all vacuum connections are secure and leak-free.   📍 Third, electrical connections are correctly reconnected and secure. Fourth, the vacuum system achieves specified vacuum levels. Fifth, the pump functions correctly as indicated by FADEC diagnostics.   📍 And finally, no damage or leaks are detected upon final inspection.
+      } catch (error) {
+        console.error("Error loading or processing data:", error);
+        // Display an error message to the user, e.g., in a div on the page
+        document.getElementById('viewer').innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+        return []; // Return an empty array to avoid further errors
+      }
+    }
+    async function exportSTL() {
+        const geometry = await main(); // Get your geometry
+        const blob = convertToBlob({
+            serializers: {stl: stlSerializer}
+        }, geometry);
 
-This video provides a general overview.   📍 Always consult the QPS-01 Maintenance Manual, document GPAM-AMPEL-0201-71-003-A, for complete technical specifications, detailed procedures, and the latest safety information.   📍 For quick access, scan the QR code on screen to directly access the manual.   📍 Remember, safety is always the top priority in all maintenance operations. Subtitles and captions are available and strongly recommended to enhance clarity and accessibility.
+        saveAs(blob, 'aircraft.stl'); // Use a library like FileSaver.js
+    }
+    async function exportSTEP() {
+            const geometry = await main(); // Get your geometry
+            const blob = convertToBlob({
+              serializers: {step: stpSerializer}
+            }, geometry);
+            saveAs(blob, 'aircraft.step'); // Use a library like FileSaver.js
+        }
+    async function exportDXF() {
+        const geometry = await main(); // Get your geometry
+        const blob = convertToBlob({
+          serializers: {dxf: dxfSerializer}
+        }, geometry);
+        saveAs(blob, 'aircraft.dxf'); // Use a library like FileSaver.js
+    }
+
+    window.onload = function() {
+        gProcessor = new OpenJsCad.Processor(document.getElementById('viewer'));
+        main().then(geometry => {
+              gProcessor.setGeometries(geometry);
+          });
+    };
+
+    </script>
+</body>
+</html>
