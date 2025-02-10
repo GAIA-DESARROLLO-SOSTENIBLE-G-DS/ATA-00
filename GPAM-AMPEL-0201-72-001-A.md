@@ -72,42 +72,30 @@ At its core, the QPS-01 Engine operates through these key steps:
 5.  **Maintaining Optimal Conditions:** The **Thermal Management System (TMS)** and other **Support Systems** work in concert to maintain the demanding operational environment for the QPS-01. This primarily involves the ultra-high vacuum needed for the QSM and the cryogenic temperatures essential for stabilizing its quantum components, ensuring optimal functioning.
 
 **(Diagram - Side View):** Diagram showing approximate engine layout from a side view, with the forward section to the left and the aft section to the right, along the engine centerline.
-```text
-+----------------------------------------------------+
-|  ✈️ Engine Centerline ✈️                               |
-|  +------------------------------------------------+  |
-|  |                                                |  |
-|  |   Zone 100: Forward Quantum Module Zone          |  |
-|  |   (Cylindrical - QSM Chamber)                |  |
-|  |      +-------------------------------+       |  |
-|  |      |    QSM (Centrally Located)    |       |  |
-|  |      +-------------------------------+       |  |
-|  |      [Access Panels - Top/Bottom]        |  |
-|  |                                                |  |
-|  +------------------------------------------------+  |
-|                    |                              |
-|                    V                              |
-|  +------------------------------------------------+  |
-|  |   Zone 200: Central Control and Power Zone  |  |
-|  |   (Cylindrical - *Increased Diameter*)         |  |
-|  |      +-------------------------------+       |  |
-|  |      |   FADEC Modules, Power Units  |       |  |
-|  |      +-------------------------------+       |  |
-|  |      [Access Panels - Side]               |  |
-|  |                                                |  |
-|  +------------------------------------------------+  |
-|                    |                              |
-|                    V                              |
-|  +------------------------------------------------+  |
-|  |   Zone 300: Aft Thermal Management Zone     |  |
-|  |   (Cylindrical - Tapered *Aft*)             |  |
-|  |      +-------------------------------+       |  |
-|  |      |   Cryo Refrig, HXs, Pumps      |       |  |
-|  |      +-------------------------------+       |  |
-|  |      [Access Panels - Side/Rear]        |  |
-|  |                                                |  |
-|  +------------------------------------------------+  |
-+----------------------------------------------------+
+
+```mermaid
+flowchart TB
+    %% Zone 100: Forward Quantum Module Zone
+    subgraph Zone100 ["Zone 100: Forward Quantum Module Zone\n(Cylindrical - QSM Chamber)\n[Access Panels - Top/Bottom]"]
+        direction TB
+        QSM_Center["QSM (Centrally Located)"]
+    end
+
+    %% Zone 200: Central Control and Power Zone
+    subgraph Zone200 ["Zone 200: Central Control and Power Zone\n(Cylindrical - *Increased Diameter*)\n[Access Panels - Side]"]
+        direction TB
+        FADEC_Power["FADEC Modules, Power Units"]
+    end
+
+    %% Zone 300: Aft Thermal Management Zone
+    subgraph Zone300 ["Zone 300: Aft Thermal Management Zone\n(Cylindrical - Tapered *Aft*)\n[Access Panels - Side/Rear]"]
+        direction TB
+        Cryo_TMS["Cryo Refrig, HXs, Pumps"]
+    end
+
+    %% Connect the zones along the engine centerline
+    Zone100 -->|Engine Centerline| Zone200 -->|Engine Centerline| Zone300
+
 ```
 
 ## 3. Key Features and Benefits
