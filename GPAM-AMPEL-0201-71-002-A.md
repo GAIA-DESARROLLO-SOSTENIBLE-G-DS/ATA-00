@@ -1,385 +1,362 @@
 
-📜 # GPAM-AMPEL-0201-71-002-A – Quantum Propulsion System (QPS-01) Description
+# QPS-01 Quantum Propulsion System – Certification Compliance Roadmap
 
-**Version:** 1.1
-**Date:** 2025-02-20
-**Status:** Draft
-**Compliance Scope:** S1000D, ATA 71 (Powerplant)
-**Authors:** Amedeo Pelliccia & AI Collaboration
+**Version:** 1.3  
+**Fecha:** 2025-02-25  
+**Autores:** Amedeo Pelliccia & AI Collaboration
 
 ---
 
-## 1. Introduction
+## 1. Introducción
 
-### 1.1 Purpose of the Document
+### 1.1 Propósito del Roadmap
+- **Objetivo Principal:**  
+  Establish a step-by-step framework for achieving regulatory compliance of the Q-01 Quantum Propulsion System (QPS).
 
-This document provides a comprehensive description of the **Quantum Propulsion System (QPS-01)**, a revolutionary propulsion system utilizing controlled quantum effects to generate thrust. It serves as a central reference for:
+- **Obiettivi Specifici:**  
+  - Ensure compliance with aircraft safety and airworthiness standards (FAR 33, CS-E, MIL-STD-882).  
+  - Define a comprehensive validation and testing plan for quantum propulsion technology.  
+  - Outline the approval pathway with FAA/EASA, including special conditions for innovative systems.
 
-- [x] System architecture and operational principles
-- [x] Component descriptions and functionality
-- [x] Performance characteristics and limitations
-- [x] Interface requirements and integration considerations
-- [x] Maintenance and operational requirements
-- [x] Compliance with relevant technical documentation standards, including S1000D and ATA 71
+### 1.2 Alcance
+- **Certificación de Componentes:**  
+  - Certification of the engine’s powerplant (FAR 33 / EASA CS-E).  
+  - Safety and risk assessments (MIL-STD-882).  
+  - Environmental and EMI/EMC compliance (DO-160 / MIL-STD-461).
 
-### 1.2 Scope
+- **Integración y Test:**  
+  - Flight tests integrated within the AMPEL360XWLRGA aircraft.  
+  - Data management and documentation using S1000D and the “Cosmic” index.
 
-This document covers the entire QPS-01 system, including:
-
-- 🔹 **Quantum State Modulator (QSM):** Responsible for generating and manipulating entangled quantum states
-- 🔹 **Quantum Energy Extractor (QEE):** Extracts energy from the quantum system and converts it into thrust
-- 🔹 **Flight-Adaptive Digital Engine Control (FADEC):** AI-driven control system managing the QPS operation
-- 🔹 **Thermal Management System (TMS):** Maintains optimal operating temperatures and protects sensitive components
-- 🔹 **Power Supply & Distribution:** Distributes electrical power to all QPS components
-- 🔹 **Support Systems:** Includes vacuum pumps, cryogenic cooling, and quantum field sensors
-
-**This document primarily focuses on the functional description, system architecture, and operational principles of the QPS-01 for certification and technical understanding. It does not cover manufacturing processes, detailed material specifications beyond high-level descriptions, or detailed cost analysis.**
-
-### 1.3 Related Documents
-
-📖 **GPAM-AMPEL-0201-71-001-A – Certification Compliance Roadmap**
-
-📖 **GPAM-AMPEL-0201-71-003-A – QPS-01 Maintenance Manual**
-
-📖 **GPAM-AMPEL-0201-71-004-A – QPS-01 Illustrated Parts Breakdown (IPB)**
-
-📖 **AMPEL360XWLRGA – Aircraft Technical Manual**
+- **Nota:**  
+  Aircraft-level certification aspects are addressed only if the Q-01 directly impacts overall safety or performance.
 
 ---
 
-## 2. System Overview
-
-### 2.1 System Architecture (Detailed)
-
-Each component of the QPS-01 plays a vital role in generating, controlling, and extracting quantum energy to produce thrust.
-
-#### 🌀 Quantum State Modulator (QSM)
-
-✅ **Core Component:** The heart of the QPS-01, creating and maintaining the entangled quantum state
-
-✅ **Operational Principle:**
-Traps and manipulates specially-prepared particles (**such as Cesium Rydberg atoms, entangled photons**). [Comment: *Specify if Cesium Rydberg atoms and entangled photons are definitive choices or examples.*] Uses precise electromagnetic field modulation to maintain entanglement. High-vacuum and cryogenic cooling ensure minimal decoherence.
-
-✅ **Key Technologies:**
-- Controlled Interaction: Electromagnetic field tuning for entanglement stability
-- Quantum Superposition: Utilizing energy level variations
-- Spontaneous Parametric Down-Conversion (SPDC): Generating entangled photon pairs
-
-<details>
-  <summary><b>Show/Hide QSM Components</b></summary>
-  *  **Quantum Entanglement Chamber:** Vacuum-sealed, cryogenically-cooled superconducting chamber (Nb-Ti), double-walled, vibration isolation, radiation shielding. **Target vacuum level: < 1x10<sup>-9</sup> torr.**
-  *  **Quantum Particle Source:** Atom Traps (Laser systems, Magnetic Field Coils), Particle Accelerators (Ion sources, Accelerating cavities), Non-linear Optical Crystals (SPDC). [Comment: *Clarify if "Particle Accelerators" are essential for entanglement or later energy extraction. If not for entanglement, consider removing or relocating description.*]
-  *  **Magnetic Field Generators:** Superconducting magnets (Cryogenic cooling systems), Electromagnets, Gradient coils.
-  *  **Control Electronics:** FPGAs (Data processing from sensors, Generate control signals), Quantum State Measurement Units (Quantum state tomography, Real-time feedback).
-  *  **Shielding Materials:** Magnetic Shielding (mu-metal), Electromagnetic Shielding (copper/aluminum), Cryogenic Shielding (cooled shields).
-  *  **Temperature Sensors and Control:** Thermometers (resistance thermometers, SQUIDs), Temperature Controllers.
-</details>
-
-#### ⚡ Quantum Energy Extractor (QEE)
-
-✅ **Function:** Extracts energy from the quantum field and converts it into usable thrust
-
-✅ **Operational Principle:**
-Electromagnetic field modulation extracts quantum energy. Quantum Tunneling Mechanisms enhance efficiency. Photon Emission Dynamics direct and control thrust output.
-
-✅ **Key Technologies:**
-- Electromagnetic Steering & Nozzles for thrust vectoring
-- Dynamic Energy Transfer Algorithms for high efficiency
-- Quantum Transition Control Circuits for energy state manipulation
-
-<details>
-  <summary><b>Show/Hide QEE Components</b></summary>
-  *  **Energy Extraction Unit:** **Primary mechanism: Direct Photon Emission.** [Comment: *Confirm if Direct Photon Emission is the primary EEU mechanism. If hybrid, specify.*] (Induced Particle Movement, Quantum Tunneling, **Direct Photon Emission**).
-  *  **Thrust Conversion Unit (TCU):** **Baseline method: Photon Accelerator.** [Comment: *Confirm if Photon Accelerator is the baseline TCU method. If multiple options considered, specify.*] (Photon Accelerator, Ionization and Acceleration Grid, Micro-Nozzle Array).
-  *  **Thrust Vectoring Mechanism (TVM):** **Primary approach: Electromagnetic Steering.** [Comment: *Confirm if Electromagnetic Steering is primary TVM. Clarify if Gimbaled Nozzles are backup/alternative.*] (Electromagnetic Steering, Gimbaled Nozzles).
-  *  **Sensor Suite:** Energy extraction rate sensors, Thrust magnitude and direction sensors, Real-time data to FADEC.
-</details>
-
-#### 🖥 Flight-Adaptive Digital Engine Control (FADEC)
-
-✅ **AI-Based Engine Control:** Manages real-time propulsion adjustments
-
-✅ **Operational Features:**
-- Model-Based AI Control for adaptive thrust tuning
-- Fault Detection & Diagnosis with predictive maintenance
-- Quantum State Monitoring System (QSM-S) for real-time state analysis **[QSM-S: Subsystem within FADEC dedicated to real-time analysis and monitoring of the Quantum State within the QSM, providing feedback for control and optimization].**
-
-✅ **Safety & Redundancy:**
-- Multi-layer AI Processing with human override (<20ms)
-- Explainable AI (XAI) for auditability (SHAP, LIME, Decision Tree Visualization)
-- Secure Quantum Data Stream (QDS) for protected communications
-
-<details>
-  <summary><b>Show/Hide FADEC Components</b></summary>
-  *  **Processing Units:** Redundant high-performance processors (multicore CPUs/GPUs).
-  *  **Sensors:** Quantum State Detectors, Temperature Sensors, Pressure Transducers, Thrust Sensors.
-  *  **Actuators:** Magnetic Field Adjustments, Valve Control, TVM Control, Power Management.
-  *  **Software:** AI Algorithms (Deep learning, Reinforcement learning, XAI), Data Processing and Analysis, Safety Monitoring (Redundancy, Fail-safe), Data Interfaces (Flight control, Navigation, Engine health monitoring). **[Comment: *Consider adding a sentence briefly describing data flow between AI Software Suite modules if applicable.*]**
-</details>
-
-#### ❄ Thermal Management System (TMS)
-
-✅ **Critical for QPS-01 Stability:** Regulates quantum system temperatures
-
-✅ **Operational Features:**
-- Cryogenic Refrigeration (< 20 mK) for QSM stability
-- Heat Exchangers and Radiators **[Type: Deployable Panel Radiators]** for energy dissipation [Comment: *Confirm radiator type - or specify heat sink type if radiators are not baseline.*]
-- Electromagnetic Shielding to isolate quantum components
-
-✅ **Thermal Control Methodologies:**
-- Superconducting Materials (Nb-Ti, YBCO) for energy efficiency
-- Liquid Helium **[Coolant Type: Liquid Helium-4 (<sup>4</sup>He)]** & Helium-3 Mixture Cooling Systems [Comment: *Confirm if Liquid Helium-4 is the primary coolant or if a Helium-3 mixture is primary/baseline.*]
-
-<details>
-  <summary><b>Show/Hide TMS Components</b></summary>
-  *  **Cryogenic Refrigerator:** **Type: Helium-3/Helium-4 Dilution Refrigerator.** [Comment: *Confirm cryo-refrigerator type. Specify if Dilution Refrigerator is definitive or an example.*] (<20 mK).
-  *  **Heat Exchangers:** Efficient heat transfer to coolant loops.
-  *  **Coolant Loops:** Circulate coolant.
-  *  **Pumps and Valves:** Coolant flow and pressure control.
-  *  **Radiators:** Heat rejection to environment/heat sink.
-  *  **Cryogenic Storage:** Liquid helium/cryogenic fluids storage.
-</details>
-
-### 2.2 Operational Principle (Detailed)
-
-The QPS-01 operates in four distinct phases:
-
-#### 1️⃣ 🔧 Initialization:
-
-- **Description**: Powering up, self-tests, vacuum, cryogenic temperatures, quantum state prep.
-- **Sequence**:
-  1. Power-Up, 2. System Diagnostics (BIST), 3. Vacuum Establishment **(Achieving < 1x10<sup>-9</sup> torr)**, 4. Cryogenic Cooling (< 20 mK), 5. Quantum State Preparation (Particle Source, Magnetic Field Tuning, Entanglement Verification).
-- **Monitoring**: FADEC monitors power, temps, pressures, quantum state.
-
-<details>
-  <summary><b>Show/Hide Initialization Sequence Details</b></summary>
-  * **Power-up and subsystem diagnostics**
-    * Aircraft power system initializes FADEC and control systems.
-    * FADEC performs Built-In Self-Tests (BIST).
-  * **Quantum state preparation and vacuum stabilization**
-    * Vacuum System creates high-vacuum in QSM Chamber **(target vacuum < 1x10<sup>-9</sup> torr)**.
-  * **Cryogenic cooling activation**
-    * TMS cools QSM and components to < 20 mK using cryogenic refrigerator.
-</details>
-
-#### 2️⃣ ⚡ Energy Extraction & Thrust Generation:
-
-- **Description**:  Extracting energy from quantum state, converting to thrust, pilot controlled.
-- **Sequence**:
-  1. Thrust Command **(Pilot Input and/or Autopilot/Flight Control System -> FADEC)**, [Comment: *Confirm if Autopilot/Flight Control System is indeed a thrust command source.*] 2. QEE Activation (FADEC signals), 3. Energy Extraction (QEE), 4. Thrust Conversion (Directed thrust), 5. Thrust Vectoring (TVM - if applicable), 6. Closed-Loop Control (FADEC real-time adjustments).
-- **Monitoring**: Thrust, energy extraction rate, quantum state, TVM performance monitoring.
-
-<details>
-  <summary><b>Show/Hide Energy Extraction & Thrust Generation Sequence Details</b></summary>
-  * **FADEC commands QSM to establish a stable quantum state**
-    * Pilot thrust input **(and/or Autopilot commands)** translated by FADEC.
-  * **QEE extracts energy and generates directed thrust**
-    * QEE energy extraction mechanism activated by FADEC.
-    * Extracted quantum energy converted to directed thrust.
-  * **FADEC adjusts thrust levels in real-time**
-    * Closed-loop control based on sensor data for thrust maintenance and efficiency.
-</details>
-
-#### 3️⃣ 🖥 Control & Regulation:
-
-- **Description**: FADEC maintains stability, optimizes performance, manages quantum state, energy extraction, temperature.
-- **Sequence**:
-  1. Sensor Input (QSM, QEE, TMS, etc.) **[Examples: QSM State Detector readings, QEE Thrust Sensors, TMS Temperature Sensors, Vacuum Pressure Sensors]**, 2. Data Processing & Analysis (AI Algorithms - Model-based, FDI), 3. Control Signal Generation (Magnetic fields, Energy extraction, TVM, Power), 4. Real-time Optimization (Efficiency, Stability), 5. Safety Monitoring (Faults, Shutdown).
-- **Monitoring**: Continuous monitoring & data logging for maintenance and analysis.
-
-<details>
-  <summary><b>Show/Hide Control & Regulation Sequence Details</b></summary>
-  * **FADEC continuously monitors, optimizes, and adjusts thrust output**
-    * Continuous sensor input from QPS-01 components.
-    * AI algorithms process data for model-based control and fault detection.
-  * **Quantum feedback loops ensure precision stability**
-    * FADEC generates control signals to actuators for real-time adjustments.
-</details>
-
-#### 4️⃣ ❄ Thermal Management:
-
-- **Description**: TMS maintains operating temperatures, especially for QSM (cryogenic).
-- **Sequence**:
-  1. Heat Load Monitoring, 2. Coolant Circulation, 3. Heat Transfer (Components -> Coolant), 4. Cooling (Cryogenic Refrigerator), 5. Heat Dissipation (Coolant removes heat), 6. Heat Rejection **[Heat Rejection Method: Radiators with forced-air cooling]** (Radiators/Heat sink), [Comment: *Confirm heat rejection method - radiators with fans or heat sink.*] 7. Closed-Loop Control (FADEC -> TMS adjustments).
-- **Monitoring**: TMS coolant pressure, flow rate, temperature monitoring by FADEC.
-
-<details>
-  <summary><b>Show/Hide Thermal Management Sequence Details</b></summary>
-  * **TMS cools the QSM and dissipates excess heat**
-    * TMS monitors heat load and circulates coolant.
-    * Heat exchangers transfer heat to coolant.
-    * Cryogenic refrigerator cools coolant.
-  * **Adaptive cryogenic control based on FADEC energy inputs**
-    * FADEC controls TMS based on temperature sensor data for optimal cooling.
-</details>
-
----
-
-### 2.3 System Performance Characteristics
-
-#### 💥 Thrust Characteristics
-
-✔ **Minimum Thrust:** 1,000 N (Newtons)
-
-✔ **Maximum Thrust:** 20,000 N
-
-✔ **Thrust Resolution:** ±1 N increments
-
-✔ **Thrust Control:** AI-FADEC adjusts output based on pilot input
-
-#### 🎯 Thrust Vectoring
-
-✔ **Vectoring Range:** ±60° from thrust axis
-
-✔ **Vectoring Rate:** 100° per second
-
-✔ **Vectoring Accuracy:** ±0.5°
-
-✔ **Control System:** Thrust Vectoring Mechanism (TVM)
-
-#### 🚀 Specific Impulse (Isp)
-
-✔ **Theoretical Potential Isp:**  The QPS-01, based on its operational principles, has a **theoretical potential** for specific impulse significantly exceeding chemical and ion engines. **The actual achievable Isp will be determined through testing and validation.**
-
-✔ **Target Isp (Flight-Tested):** To be validated via QPS-01 trials
-
-✔ **Measurement Method:** FADEC-monitored in real-time
-
-#### ⚡ Power Requirements
-
-✔ **Power Input Range:** 100 - 500 kW
-
-✔ **Power Source:** Aircraft Electrical System (AEHCS)
-
-✔ **Efficiency Metrics:** Monitored by FADEC
-
-#### 🌌 Operating Environment
-
-✔ **Vacuum Level:** Near-perfect vacuum for QSM stability
-
-✔ **Cryogenic Temperatures:** Below 20 mK for QSM operation
-
-✔ **Electromagnetic Shielding:** Up to 80 dB attenuation
-
----
-
-## 3. Next Steps & Verification Pathway
-
-📌 📊 **Computational Simulations** – Validate QPS-01 operational physics **[Types: Computational Fluid Dynamics (CFD) for thrust modeling, Quantum simulations for entanglement stability, Thermal simulations for TMS performance]**
-
-📌 🛠 **Ground Testing & Integration** – Bench tests for QEE, QSM, FADEC
-
-📌 ✈ **Flight Trials** – Assess thrust output, FADEC stability, thermal performance
-
-📌 📜 **Certification Engagement** – Submit GPAM-AMPEL-0201-CERT-001-A for FAA/EASA review
-
----
-
-## 4. Conclusion & Further Work
-
-This document provides a structured, detailed overview of the QPS-01 propulsion system. It serves as the technical foundation for all further certification and operational planning. **This document is structured and detailed to align with S1000D and ATA 71 standards, providing a technical foundation for certification and operational planning, with ongoing reviews to ensure full compliance.**
-
-[Diagram - Detailed Block Diagram of QPS-01 System Architecture - *To be enhanced with signal flow arrows and interface labels as per feedback*]
-
-*  **Diagram Type:** Combined system diagram.
-*  **Layout:** Centralize the QSM, QEE, FADEC, TMS, and Power Supply blocks.
-*  **[Text-Based Description of Detailed Block Diagram (See Below)]**
-
-**Text-Based Description of Detailed Block Diagram:**
-
-### **📜 Q-01 Quantum Propulsion System – Electrical Power Flow Diagram (Draft)**
-
-**Document Code:** GPAM-AMPEL-0201-76-005-A  **Date:** 2025-02-16  **Author:** Amedeo Pelliccia & AI Collaboration  **Status:** Draft
-
----
-
-## **🔹 Aircraft Power System Overview**
-
-The **Quantum Propulsion System (QPS)** is powered via a structured electrical distribution architecture, **originating from the aircraft’s main power system** and subsequently **conditioning and distributing energy** to individual subsystems of the QPS. The architecture is built with **multiple redundancy levels** and **circuit protection** to ensure safety and operational stability.
+## 2. QPS-01 Engine: A Revolutionary Propulsion Concept
+
+### 2.1 Introducing Quantum Propulsion
+The **Quantum Propulsion System (QPS-01) Engine** represents a paradigm shift in propulsion technology. Instead of relying on conventional combustion or ion acceleration methods, the QPS-01 harnesses controlled quantum effects to generate thrust. This novel approach offers potential for:
+- **Significantly Higher Specific Impulse (Isp):** Increased fuel efficiency and extended range.
+- **Enhanced Thrust-to-Power Ratio:** Greater performance with optimized power consumption.
+- **Scalability and Adaptability:** Suitable for a wide range of aircraft types and mission profiles.
+- **Environmentally Conscious Operation:** Zero-emission operation, reducing the carbon footprint of air travel.
+
+*Imagine not having to burn fuel, but instead using the intrinsic energy of quantum states to propel an aircraft!*
+
+### 2.2 Simplified Operational Principle
+
+The QPS-01 Engine operates through these key phases:
+1. **Generating a Controlled Quantum State:**  
+   The Quantum State Modulator (QSM) creates and maintains an entangled quantum state in a near-perfect vacuum at cryogenic temperatures.
+2. **Extracting Quantum Energy:**  
+   The Quantum Energy Extractor (QEE) interacts with the QSM's quantum state to extract energy efficiently.
+3. **Converting Energy to Thrust:**  
+   The QEE converts the extracted energy into directed momentum, generating thrust.
+4. **Intelligent Engine Management:**  
+   The Flight-Adaptive Digital Engine Control (FADEC) continuously monitors sensor data and optimizes engine performance.
+5. **Maintaining Optimal Conditions:**  
+   The Thermal Management System (TMS) and Support Systems ensure the required vacuum and cryogenic environment.
+
+**Block Diagram: QPS-01 Engine Operational Principle**
+
+Below is a text-based block diagram that explains the high-level operation:
+
+```mermaid
+flowchart TB
+    subgraph "Engine Components"
+        QSM["QSM\n(Quantum State Generator)"] -- "Energy Transfer" --> QEE["QEE\n(Energy Extraction & Conversion)"]
+        QEE --> |"Directed Momentum"| Thrust["THRUST\n(Directed Momentum)"]
+
+        QSM --> |"Environmental Control\n(Vacuum, Cryo)\n(TMS, Vacuum Sys.)"| FADEC["FADEC\n(AI Engine Control)"]
+        TMS["Thermal Management System"] --> FADEC
+        VacuumSys["Vacuum System"] --> FADEC
+
+        FADEC --> |"Control Signals"| QEE
+        FADEC --> |"Pilot Commands\n(Thrust, Vector)"| Thrust
+        SensorData["Sensor Data"] --> FADEC
+        FADEC --> |"Engine Performance Monitoring"| EnginePerformance["ENGINE PERFORMANCE\nMONITORING"]
+    end
 
 ```
-+-----------------------------------------------------------------------+
-|                        ✈️ AIRCRAFT POWER SYSTEM                        |
-+-----------------------------------------------------------------------+
-|
-|      [ Power (Aircraft) ]
-|      (🔴 Red Line - Primary Power Supply)
-|
-|      ⬇
-|  +-------------------------------------------------------------------+ |
-|  |            🔌 Power Supply & Distribution                        | |
-|  |  +-----------------------------------------------------------+   | |
-|  |  |  🔋 Power Converters → PDUs → Circuit Protection          |   | |
-|  |  |-----------------------------------------------------------|   | |
-|  |  |  ➤ Converts Aircraft Voltage to Required QPS Levels       |   | |
-|  |  |  ➤ Filters Noise, Surge Protection                        |   | |
-|  |  |  ➤ Isolates & Distributes Electrical Power to QPS         |   | |
-|  |  |
-|  |  |  ⚡ [Power Signal to all QPS Components]
-|  +---------------------------------------------------------------+   | |
-+-----------------------------------------------------------------------+
-|
-|      🔴 [ Power (QPS) ] (Primary Electrical Path)
-|      ⬇
-+-----------------------------------------------------------------------+
+
+**Mermaid Diagram: QPS-01 Engine Operational Principle**
+
+```mermaid
+flowchart TB
+    QSM["QSM: Quantum State Generator"] --> |Energy Transfer| QEE["QEE: Energy Extraction & Conversion"]
+    QEE --> |Directed Momentum| Thrust["THRUST: Directed Momentum"]
+
+    QSM --> |Environmental Control: Vacuum, Cryo; TMS, VacuumSys| FADEC["FADEC: AI Engine Control"]
+    TMS["TMS: Thermal Management System"] --> FADEC
+    VacuumSys["Vacuum System"] --> FADEC
+
+    FADEC --> |Control Signals| QEE
+    FADEC --> |Pilot Commands: Thrust, Vector| Thrust
+    SensorData["Sensor Data"] --> FADEC
+    FADEC --> |Engine Performance Monitoring| EnginePerformance["ENGINE PERFORMANCE: Monitoring"]
+
+    classDef control fill:#ccf,stroke:#333,stroke-width:2px;
+    class QSM,QEE,Thrust,FADEC,EnginePerformance control;
 ```
+
+**Legend:**
+- **(Línea Roja - Energía):** Electrical power flow.
+- **(Línea Azul - Datos):** Data and control signal flow.
+- **(Línea Verde - Refrigerante):** Coolant flow.
+- **(Línea Negra - Vacío):** Vacuum pressure level.
+- **[ ]:** Indicates a signal or data stream.
+- **+ :** Indicates components or aggregated elements.
+- **->:** Indicates direction of flow.
+
+*KPIs & Sensor Points:*
+- **QSM:** Entanglement fidelity, coherence time, chamber temperature.
+- **QEE:** Thrust output, energy extraction rate, thrust vector angle (TVM).
+- **FADEC:** AI algorithm outputs, decision logs (XAI).
+- **TMS:** Coolant temperature and pressure.
+- **Power Supply:** Power input, voltage, current.
 
 ---
 
-## **🔹 Power Distribution to Core Subsystems**
+## 3. Key Features and Benefits
 
-The **QPS power architecture** supplies controlled electrical energy to four main subsystems:
-
-1️⃣ **Quantum State Management (QSM)** – Generates and maintains the **quantum field parameters**
-2️⃣ **Quantum Entanglement Engine (QEE)** – The **core propulsion unit** for generating thrust
-3️⃣ **Flight AI-FADEC (QCS)** – AI-driven **thrust and stability control**
-4️⃣ **Thermal Management System (TMS)** – Maintains **operational temperatures** and **cryogenic cooling**
-
-```
-    ⬇
-+----------------+   +-----------------------+   +-----------------------+   +------------------------+
-|   🌀 QSM      |   |  🔮 QEE                |   |  🖥 FADEC (QCS)        |   |  ❄ TMS                 |
-+----------------+   +-----------------------+   +-----------------------+   +------------------------+
-|                |   |                        |   |                        |   |                        |
-|  Quantum Env.  |   |  Entanglement Control  |   |  Processing Units      |   |  Cryogenic Refrigeration|
-|   Chamber      |   |  (Photon Emission)     |   |  AI Decision Engine    |   |  Heat Exchangers       |
-|  Cryo-cooled    |   |  Thrust Vectoring     |   |  Sensor Data Analysis |   |  Coolant Circulation   |
-|  Vacuum Pumps   |   |  Thrust Generation    |   |  Actuator Control     |   |  Radiators             |
-|                |   |                        |   |  XAI & Safety Modules|   |  Temp. Monitoring     |
-+----------------+   +-----------------------+   +-----------------------+   +------------------------+
-       |                   |                       |                       |                  |
-       |                   |                       |                       |                  |
-       -----⚡ Power -----️-----⚡ Power ----------️-----⚡ Power ----------️-----⚡ Power ---------
-```
+- **Revolutionary Thrust Generation:**  
+  Utilizes quantum mechanics for a fundamentally new propulsion approach.
+- **High Specific Impulse (Isp):**  
+  Theoretical potential to far exceed traditional chemical and ion engines.
+- **Adaptive AI-Driven Control:**  
+  FADEC ensures real-time optimization, fault detection, and safe operation.
+- **Cryogenic Thermal Management:**  
+  TMS maintains ultra-low temperatures critical for quantum stability.
+- **Thrust Vectoring Capability:**  
+  Enhances maneuverability via an advanced TVM.
+- **Scalable and Environmentally Friendly:**  
+  Adaptable for various aircraft and eliminates traditional fuel combustion emissions.
 
 ---
 
-## **🔹 Control and Data Integration**
+## 4. Main System Components (Overview)
 
-The **Flight AI-FADEC (QCS)** serves as the **centralized control and data processing hub**. It integrates sensor data, pilot commands, and system status to manage and optimize the QPS operation.
-
-```
-                                    ⬆️⬇️ [Sensor Data: Temps, Pressure, Quantum State, Thrust]
-                                    |
-+-----------------------------------------------------------------------+
-|                      🖥 FLIGHT AI-FADEC (QCS)                         |
-+-----------------------------------------------------------------------+
-|  +-----------------------+   +-----------------------+   +-----------------------+   |
-|  | 🧠 AI Decision Engine|   | 📊 Data Processing    |   | 🛡️ Safety & XAI       |   |
-|  |  ➤ Model-Based Control|   |  ➤ Sensor Fusion      |   |  ➤ Fault Detection     |   |
-|  |  ➤ Thrust Optimization|   |  ➤ Real-time Analysis|   |  ➤ Emergency Handling  |   |
-|  |  ➤ Quantum State Mgmt|   |  ➤ Data Logging       |   |  ➤ Explainable AI (XAI)|   |
-|  +-----------------------+   +-----------------------+   +-----------------------+   |
-|                                    ⬇️ [Control Signals: QSM, QEE, TMS, Power]            |
-|                                    |
-|      +-----------+     +-----------+     +-----------+     +-----------+
-|      | 🌀 QSM  |-----|  🔮 QEE   |-----|  ❄ TMS  |-----| 🔌 Pwr Sys|
-|      +-----------+     +-----------+     +-----------+     +-----------+
-|          [Quantum Field Control]  [Thrust & Vectoring][Cryogenic & Thermal Mgt][Power Distribution]
-+-----------------------------------------------------------------------+
-|                                                                       |
-|          ⬅️ Pilot Thrust Command & Aircraft Data Bus ➡️                |
-+-----------------------------------------------------------------------+
-```
+- **Quantum State Modulator (QSM):**  
+  Creates and maintains the entangled quantum state.
+- **Quantum Energy Extractor (QEE):**  
+  Extracts energy from the QSM and converts it into thrust.
+- **Flight-Adaptive Digital Engine Control (FADEC):**  
+  AI-driven system that monitors and adjusts engine operation.
+- **Thermal Management System (TMS):**  
+  Ensures the necessary cryogenic environment.
+- **Power Supply & Distribution System:**  
+  Provides and manages electrical power.
+- **Support Systems (Vacuum & Cryogenics):**  
+  Maintain the high vacuum and cryogenic conditions essential for operation.
 
 ---
+
+## 5. Performance Summary
+
+### 5.1 Introduction
+This section summarizes key performance characteristics of the QPS-01, showcasing its groundbreaking efficiency and operational capabilities.
+
+### 5.2 Thrust and Efficiency
+- **Maximum Thrust:** 250 kN (at sea level under standard conditions)
+- **Specific Impulse (Isp):** Target value of 15,000 s (to be verified via flight tests)
+- **Thrust-to-Weight Ratio:** Projected ratio of 28:1 or greater
+
+### 5.3 Power Requirements and Operating Environment
+- **Power Input Range:** 100 - 500 kW
+- **Operating Conditions:**
+  - Near-perfect vacuum for QSM stability.
+  - Cryogenic temperatures below 20 mK.
+  - Electromagnetic shielding achieving up to 80 dB attenuation.
+
+---
+
+## 6. Next Steps & Verification Pathway
+
+- **Simulation & Modeling:**  
+  Validate QPS-01 physics through computational simulations.
+- **Component Testing:**  
+  Conduct bench tests on individual subsystems (QSM, QEE, FADEC).
+- **Flight Trials:**  
+  Assess performance, stability, and thermal management during flight.
+- **Certification Engagement:**  
+  Submit documentation (e.g., GPAM-AMPEL-0201-CERT-001-A) for FAA/EASA review.
+
+---
+
+## 7. Conclusion & Further Work
+
+This document provides a comprehensive technical foundation for the QPS-01 Engine. Its modular, standards-compliant structure facilitates ongoing development, rigorous testing, and eventual certification. Future work will expand into detailed repair procedures and further refine system performance data.
+
+---
+
+## 8. Diagram and System Description
+
+**[Detailed Block Diagram]**
+
+The diagram below illustrates the flow of energy, data, and control among the primary components of the QPS-01:
+
+```mermaid
+%%{init: {'theme': 'handDrawn'}}%%
+flowchart TB
+    subgraph Aircraft_Power_System
+        A1["Aircraft Power Bus"]
+    end
+    subgraph Power_Supply_Distribution
+        B1["Power Converters"] --> B2["PDUs"]
+        B2 --> B3["Circuit Protection"]
+    end
+    A1 --> B1
+    B3 -- Power --> QSM
+    B3 -- Power --> QEE
+    B3 -- Power --> FADEC
+    B3 -- Power --> TMS
+    B3 -- Power --> VacuumSys
+    subgraph QSM
+        C1["Quantum State Modulator"]
+        C2["Quantum Particle Source"]
+        C3["Magnetic Field Generators"]
+        C4["Control Electronics"]
+        C5["Shielding"]
+        C6["Temp Sensors"]
+        C1 --> |"Quantum State"| QEE
+        C6 --> |"Temperature Data"| FADEC
+    end
+    subgraph QEE
+        D1["Energy Extraction Mechanism"]
+        D2["Thrust Conversion Unit"]
+        D3["Thrust Vectoring Mechanism"]
+        D4["Performance Sensors"]
+        D2 --> |"Thrust Output"| Thrust
+        D4 --> |"Performance Data"| FADEC
+        D1 --> |"Control Signals"| FADEC
+        D1 --> |"Heat"| TMS
+    end
+    subgraph FADEC
+        E1["Processing Core"]
+        E2["Data Acquisition"]
+        E3["Actuator Interface"]
+        E4["AI Software"]
+        E5["Data Interfaces"]
+        E1 --> |"Power Management"| B3
+        E1 --> |"QEE Control"| QEE
+        E1 --> |"TMS Control"| TMS
+        E2 --> |"Sensor Data"| E1
+        E5 --> |"Pilot Commands"| E1
+        E5 --> |"Flight Conditions"| E1
+        E1 --> |"System Status"| Output
+    end
+    subgraph TMS
+        G1["Cryogenic Refrigerator"]
+        G2["Heat Exchangers"]
+        G3["Coolant Loops"]
+        G4["Cryogenic Pumps"]
+        G5["Radiators/Heat Sink"]
+        G5 --> |"Heat Rejection"| Output
+        G1 --> |"Coolant Supply"| QEE
+        G1 --> |"Coolant Supply"| FADEC
+        G1 --> |"Power for Pumps"| B3
+        G4 --> |"TMS Status Data"| FADEC
+    end
+    subgraph VacuumSys
+        H1["Chamber Vacuum"]
+        H2["Vacuum Pump System"]
+        H3["Vacuum Gauges"]
+        H4["Vacuum Valves"]
+        H1 --> |"Vacuum Supply"| QSM
+        H3 --> |"Pressure Data"| FADEC
+        H2 --> |"Power for Vacuum"| B3
+    end
+    classDef component fill:#e6e6ef,stroke:#5f6368,stroke-width:2px,color:#1a1a1a;
+    classDef subsystem fill:#d0e1f9,stroke:#4b8ec1,stroke-width:2px,color:#1a1a1a;
+    class QSM,QEE,FADEC,TMS,VacuumSys subsystem;
+    class B1,B2,B3,C1,C2,C3,C4,C5,C6,D1,D2,D3,D4,E1,E2,E3,E4,E5,G1,G2,G3,G4,G5,H1,H2,H3,H4 component;
+
+
+
+```
+
+**Legend:**
+- **(Línea Roja - Energía):** Electrical power flow.
+- **(Línea Azul - Datos):** Data and control signal flow.
+- **(Línea Verde - Refrigerante):** Coolant flow.
+- **(Línea Negra - Vacío):** Vacuum pressure level.
+- **[ ]:** Indicates a signal or data stream.
+- **+ :** Indicates components or aggregated elements.
+- **->:** Indicates direction of flow.
+
+*KPIs & Sensor Points:*
+- **QSM:** Entanglement fidelity, coherence time, chamber temperature.
+- **QEE:** Thrust output, energy extraction rate, thrust vector angle (TVM).
+- **FADEC:** AI algorithm outputs, decision logs (XAI).
+- **TMS:** Coolant temperature and pressure.
+- **Power Supply:** Power input, voltage, current.
+
+---
+
+## 10. Strategia de Distribución y Actualización
+
+- **Formati di Pubblicazione:**  
+  Documentation will be available in PDF, HTML5, and ePub with interactive navigation.
+
+- **Gestione degli Accessi:**  
+  A secure web portal will be used to control stakeholder access.
+
+- **Integrazione API:**  
+  Programmable access will be provided for continuous data synchronization and updates.
+
+---
+
+## 11. Conclusión
+
+This document defines a comprehensive, modular documentation structure that integrates S1000D with ATA 71 and other relevant standards.
+
+**Key Advantages:**
+- **Modularità e Scalabilità:**  
+  Flexible management via Data Modules.
+- **Tracciabilità e Uniformità:**  
+  Hierarchical numbering ensures easy traceability.
+- **Conformità Normativa:**  
+  Alignment with international standards ensures safety and quality.
+- **Efficienza Operativa:**  
+  Automation via CI/CD, CSDB, and API enables continuous updates and maintenance.
+
+This structure ensures that the AMPEL-360XWLRGA system can be maintained efficiently and scaled to meet evolving aerospace requirements.
+
+---
+
+## 12. Strumenti e Validazione
+
+- **Editor XML & Validator:**  
+  Tools (e.g., Oxygen XML Editor) are used to validate Data Modules.
+- **CSDB Integration:**  
+  Modules are integrated into a Common Source DataBase to facilitate updates and versioning.
+- **Pipeline CI/CD:**  
+  Automation for continuous S1000D validation and change tracking.
+
+---
+
+## 13. Distribución y Actualizaciones
+
+- **Formati di Pubblicazione:**  
+  PDF, HTML5, and ePub with interactive features.
+- **Gestione degli Accessi:**  
+  Secure web portal for stakeholders.
+- **Integrazione API:**  
+  Programmable access for data synchronization and updates.
+
+---
+
+## 14. Note Finali
+
+- **Struttura Adattabile:**  
+  Designed to extend to every ATA chapter.
+- **Tracciabilità P/N e DMC:**  
+  Each section is associated with specific codes to ensure compliance and continuous updates.
+- **Aggiornamenti Continui:**  
+  The system is designed to integrate new standards (e.g., S1000D Issue 6.1, DO-178C updates) and keep the documentation up-to-date.
+
+---
+
+*Fonte: GitHub release page*
+```
