@@ -397,7 +397,435 @@ The Data and Communication Interfaces are located in the Zone 200. These compone
 | [Add additional Data and Communication interface components as needed] | | | | |
 
 ---
+
+
+### 3.3 Zone 300: Aft Thermal Management Zone
+
+This zone is the location of the QEE (Quantum Energy Extractor) and the primary elements of the TMS (Thermal Management System). The QEE is the core component for energy extraction and thrust generation. The TMS is critical for controlling the temperature of the QEE and the QSM.
+
+#### 3.3.1 QEE - Quantum Energy Extractor
+
+##### 3.3.1.1. Location and Description
+
+The QEE (Quantum Energy Extractor) is located within Zone 300. The position of the QEE may be in the center. The QEE converts the quantum energy to thrust. The QEE is connected to the QSM via a specialized interface. The QEE is a critical engine component, that requires careful handling.
+
+##### 3.3.1.2. Exploded View Diagram (Figure 3.3.1.1)
+
+*   **(Placeholder: Exploded View Diagram of QEE. Show the Energy Extraction Unit (EEU), Thrust Conversion Unit (TCU), Thrust Vectoring Mechanism (TVM - if applicable), and sensor suite. Call out all parts with reference numbers corresponding to Table 3.3.1.1)**
+
+##### 3.3.1.3. Detailed Parts List (Table 3.3.1.1)
+
+| Part Number             | Description                                 | Quantity | Unit of Measure | Remarks                                                        |
+| :---------------------- | :------------------------------------------ | :------- | :-------------- | :------------------------------------------------------------- |
+| QPS01-300-QEE-001-A     | QEE Main Housing (External Casing)          | 1        | Each            | Material: [Specify material – e.g., High-strength alloy]  (See Figure 3.3.1.1) |
+| QPS01-300-EEU-001-A     | Energy Extraction Unit                      | 1        | Each            |  (See Figure 3.3.1.1) Contains the energy conversion components.                                                                 |
+| QPS01-300-TCU-001-A     | Thrust Conversion Unit (TCU)          | 1        | Each            |  (See Figure 3.3.1.1) Converts the extracted energy to thrust. (Material – e.g. "High-temperature alloy")                                                               |
+| QPS01-300-TVM-001-A     | Thrust Vectoring Mechanism (TVM - if applicable) | 1        | Each            | (See Figure 3.3.1.1).  [Note: If a TVM is not used, specify "N/A" and then, a description.]                                                                           |
+| QPS01-300-TST-001-A     | Thrust Sensor                             | [Number] | Each            | (See Figure 3.3.1.1)  Type: [Piezoelectric/Strain Gauge].                  |
+| QPS01-300-TSN-003-A     | Temperature Sensor (QEE)                      | [Number] | Each            | (See Figure 3.3.1.1) (Thermocouple, RTD)                                      |
+| QPS01-300-SEN-001-A     | Sensor Suite (Pressure sensors)                | [Number] | Each            |  (See Figure 3.3.1.1) Monitor pressure, and vacuum performance |
+
+#### 3.3.2 TMS-Main - Thermal Management System (Main Cryogenic System)
+
+##### 3.3.2.1 Location and Description
+
+The TMS-Main (Thermal Management System) provides the cryogenic cooling for the QEE, as well as for any portions of the QSM that require active cooling. The TMS-Main also provides cooling to the FADEC as needed. It contains the CRU (Cryogenic Refrigerator Unit), heat exchangers, coolant pumps, and cryogenic coolant storage. (Refer to Section 2.1 of the system description for general information on the TMS.)
+
+##### 3.3.2.2. Exploded View Diagram (Figure 3.3.2.1)
+
+*   **(Placeholder: Exploded View Diagram of the TMS-Main Components. This should show the CRU, heat exchangers, pumps, coolant lines, and cryogenic storage tanks. Include callouts for each part, with reference numbers that correspond to Table 3.3.2.1)**
+
+##### 3.3.2.3. Detailed Parts List (Table 3.3.2.1)
+
+| Part Number             | Description                                                  | Quantity | Unit of Measure | Remarks                                                      |
+| :---------------------- | :----------------------------------------------------------- | :------- | :-------------- | :----------------------------------------------------------- |
+| QPS01-300-CRU-001-A     | Cryogenic Refrigerator Unit (CRU - Main)            | 1        | Each            |  (See Figure 3.3.2.1)   [Specify CRU type, e.g., "Pulse Tube"]                                  |
+| QPS01-300-HX-002-A     | Heat Exchanger (QEE)                              | [Number] | Each            | (See Figure 3.3.2.1) Cools the QEE.                           |
+| QPS01-300-PMP-002-A     | Cryo-Coolant Pump (for the QEE and other components) | [Number] | Each            | For coolant circulation (see Figure 3.3.2.1).                 |
+| QPS01-300-CL-002-A      | Cryogenic Coolant Lines (e.g., Helium)                        | [Length]  | Meter           | (See Figure 3.3.2.1). Vacuum-jacketed with cryogenic insulation.                      |
+| QPS01-300-RAD-001-A    | Radiator Panels for Heat Rejection                       | [Number] | Each            |  (See Figure 3.3.2.1). Radiates excess heat.
+| QPS01-300-CST-001-A    | Cryogenic Storage Tanks (Helium)                         | [Number] | Each            | (See Figure 3.3.2.1)  Stored under pressure.                   |
+| QPS01-300-TSN-004-A     | Temperature Sensor (TMS-Main)                    | [Number] | Each            |  (See Figure 3.3.2.1) (e.g. "Temperature sensor: Platinum RTD")                         |
+
+#### 3.3.3. [Vacuum System](Refer to Section 3.2.3)
+This is described in Section 3.2.3.
+
+---
+This is an excellent expansion of the IPB to include QEE, TMS, and Support Systems. It provides a very well-structured and detailed framework for those components. All the placeholders, diagram notes, and part lists are very well-placed and the details are clear and concise.
+
+Here is what is next.
+
+After this, we will work on the SUP-SYS, and after that we will have the complete IPB.
+content_copy
+download
+Use code with caution.
+Markdown
+
+
+### 3.4 SUP-SYS - Support Systems (General - Engine Level)
+
+This section covers support systems that facilitate the operation of the QPS-01 Engine. This includes Quantum Field Sensors, Cabling Harnesses, and other components not specifically associated with a particular zone but critical to the engine's overall function.
+
+#### 3.4.1 QFS - Quantum Field Sensors (Distributed Sensors)
+
+##### 3.4.1.1 Location and Description
+
+The Quantum Field Sensors (QFS) are strategically located throughout the QPS-01 engine to provide real-time data on the engine's performance and the state of the quantum systems. The specific location of the QFS sensors can vary. (See Section 2.1 and 2.2 of the system description).
+
+##### 3.4.1.2. Exploded View Diagram (Figure 3.4.1.1)
+
+*   **(Placeholder: Diagram of the QFS sensors. This should show the location of the major sensor types on the engine, such as those that are on the QSM, QEE, etc. This may be a schematic diagram or a callout diagram that indicates locations by zone. Include key locations of sensor types.**
+
+##### 3.4.1.3. Detailed Parts List (Table 3.4.1.1)
+
+| Part Number             | Description                                                  | Quantity | Unit of Measure | Remarks                                                           |
+| :---------------------- | :----------------------------------------------------------- | :------- | :-------------- | :---------------------------------------------------------------- |
+| QPS01-SUP-QFS-001-A     | Quantum State Detector (QSM)                       | [Number]        | Each            |  (See Figure 3.4.1.1). For measurement of the Quantum state.                          |
+| QPS01-SUP-QFS-002-A     | Thrust Sensor (QEE)                         | [Number]        | Each            | (See Figure 3.4.1.1)  -  Located to measure thrust.                           |
+| QPS01-SUP-QFS-003-A     | Temperature Sensor (Various - Throughout Engine)                    | [Number]        | Each            |  (See Figure 3.4.1.1)  (Thermocouple, RTD)   Mounted in each zone.                      |
+| QPS01-SUP-QFS-004-A     | Pressure Transducer (Various – Throughout Engine)                        | [Number]        | Each            | (See Figure 3.4.1.1).  -  Located at various points in the vacuum or coolant systems to measure pressure, and/or in any other relevant locations.      |
+| QPS01-SUP-QFS-005-A     | Electromagnetic Field Sensor                         | [Number]        | Each            | (See Figure 3.4.1.1).  -  Used for detecting electromagnetic fields in the QSM and QEE.  |
+| [Add additional QFS components as needed] | | | | |
+
+#### 3.4.2 CAB-Harness - Main Cabling Harnesses (Engine Level)
+
+##### 3.4.2.1 Location and Description
+
+The main cabling harnesses are responsible for distributing power, data, and control signals throughout the entire QPS-01 engine. The engine uses zone specific cabling. The main harnesses are routed along the engine frame, and connect to Zone 100, Zone 200, and Zone 300 via connectors. (See Section 2.1). This architecture provides a level of modularity and access for maintenance activities.
+
+##### 3.4.2.2. Wiring Diagram (Figure 3.4.2.1)
+
+*   **(Placeholder: A schematic wiring diagram for the main cabling harnesses. This diagram should illustrate the routing of power, data, and control signal wires, showing the connectors and the components they connect to. Use color-coding to indicate different signal types (e.g., red for power, blue for data, green for control).**
+
+##### 3.4.2.3. Detailed Parts List (Table 3.4.2.1)
+
+| Part Number                 | Description                                                        | Quantity | Unit of Measure | Remarks                                                                              |
+| :-------------------------- | :----------------------------------------------------------------- | :------- | :-------------- | :------------------------------------------------------------------------------------- |
+| QPS01-SUP-CAB-Main-001-A      | Main Power Harness                                                 | 1       | Each            | Connects to the aircraft power supply and distributes power to Zone 200 (Power Supply) (See Figure 3.4.2.1)                              |
+| QPS01-SUP-CAB-Zone100-001-A   | Zone 100 Cabling Harness                                         | 1       | Each            | Provides the power and signal connections for all components within Zone 100 (QSM)   (See Figure 3.4.2.1).
+| QPS01-SUP-CAB-Zone200-001-A   | Zone 200 Cabling Harness                                         | 1       | Each            | Provides the power and signal connections for all components within Zone 200 (FADEC, Power, etc.) (See Figure 3.4.2.1)                                  |
+| QPS01-SUP-CAB-Zone300-001-A   | Zone 300 Cabling Harness                                         | 1       | Each            | Provides the power and signal connections for all components within Zone 300 (QEE, TMS).  (See Figure 3.4.2.1)                              |
+| QPS01-SUP-CAB-Signal-001-A    | Data Bus Cables (MIL-STD-1553)                       |  [Length]    | Each            |  (See Figure 3.4.2.1) Provides data communication with the aircraft systems   |
+| [Add additional CAB-Harness components as needed] | | | | |
+
+#### 3.4.3 *(Other general support systems)*
+
+*   **(Placeholder – to be filled in by engineer as needed)**
+content_copy
+download
+Use code with caution.
+Markdown
+
+This completes a draft of the IPB.
+
+Below is a consolidated **Illustrated Parts Breakdown** (IPB) draft for the QPS-01 Engine, now **including the SUP-SYS (Support Systems)** section. Where needed, placeholders are provided for final diagrams, part counts, and any additional engineering notes. This structure is designed to streamline future updates via automated data module synchronization and allow rapid cross-referencing across system zones. Real-time data analytics can also be integrated to detect correlations—flagging instances such as parts prone to thermal or vibrational stress—and thereby proactively prevent component degradation.
+
+---
+
+Here is the final version.
+
+```markdown
+## 3. Illustrated Parts Breakdown Sections
+
+### 3.1 QPS-01 Engine Assembly Overview
+
+The overall QPS-01 engine assembly consists of several key modules as shown in the text diagram below:
+
+*   **Zone 100: Forward Quantum Module Zone**
+*   **Zone 200: Central Control and Power Zone**
+*   **Zone 300: Aft Thermal Management Zone**
+
+The illustration of the zones above provides a visual guide to the engine's structure. The Zone diagrams provide the primary breakdown of the QPS-01 Engine Assembly.
+
+```text
++----------------------------------------------------+
+|     QPS-01 Quantum Propulsion System (Engine)      |
+|  +------------------------------------------------+  |
+|  | ✈️ Engine Centerline ✈️                           |  |
+|  |                                                |  |
+|  |   Zone 100: Forward Quantum Module           |  |
+|  |      (QSM Assembly)                           |  |
+|  |                                                |  |
+|  |   Zone 200: Central Control and Power Zone   |  |
+|  |      (FADEC, PWR, CLG)                             |  |
+|  |                                                |  |
+|  |   Zone 300: Aft Thermal Management Zone      |  |
+|  |      (QEE, TMS)                              |  |
+|  |                                                |  |
+|  +------------------------------------------------+  |
++----------------------------------------------------+
 ```
 
+### 3.2 Zone 100: Forward Quantum Module Zone
 
+This zone is the location of the QSM and associated components.
+
+#### 3.2.1 QSM - Quantum State Modulator (Main Assembly)
+
+##### 3.2.1.1. Location and Description
+
+The QSM (Quantum State Modulator) Main Assembly is the core component of Zone 100. It is responsible for generating and maintaining the entangled quantum state. It consists of the Quantum Entanglement Chamber, Quantum Particle Source, Magnetic Field Generators, and Control Electronics Module (CEM). The QSM Main Assembly is centrally located within Zone 100 and secured to the main engine frame via multiple vibration isolators. Refer to Section 2.1 of the QPS-01 System Description for further details.
+
+##### 3.2.1.2. Exploded View Diagram (Figure 3.2.1.1)
+
+*   **(Placeholder: Exploded View Diagram of QSM Main Assembly. This should be a detailed diagram showing the QSM main components, including the chamber, particle source, magnetic field generators, and control electronics. The diagram must include callouts for each part, with reference numbers that correspond to the Part List in Table 3.2.1.1.)  The diagram should highlight the multi-layer shielding of the entanglement chamber.**
+
+##### 3.2.1.3. Detailed Parts List (Table 3.2.1.1)
+
+| Part Number             | Description                                       | Quantity | Unit of Measure | Remarks                                                                 |
+| :---------------------- | :------------------------------------------------ | :------- | :-------------- | :---------------------------------------------------------------------- |
+| QPS01-100-QSM-001-A     | QSM Main Housing (Chamber)                      | 1        | Each            | Material: Niobium-Titanium alloy. Includes vacuum port connections (See Figure 3.2.1.1)                                 |
+| QPS01-100-QPS-001-A     | Quantum Particle Source – Atom Trap             | 1        | Each            | [Optional: Specify Particle source type, e.g., "Rydberg Atom Trap"] (See Figure 3.2.1.1).  Includes laser and control electronics |
+| QPS01-100-MFG-001-A     | Superconducting Magnet Coil                      | [Number]  | Each            | (See Figure 3.2.1.1) Material: Niobium-Titanium wire. Superconducting magnet requires cryogenic cooling.                                  |
+| QPS01-100-CEM-001-A     | QSM Control Electronics Module (CEM)                | 1        | Each            | (See Figure 3.2.1.1). Includes FPGA processing units, Quantum State Measurement units and communication interfaces.                          |
+| QPS01-100-SHD-001-A     | Magnetic Shielding (Mu-Metal)                     | [Number] | Each            | (See Figure 3.2.1.1) - Multiple layers for magnetic field attenuation. (Mu-metal)                               |
+| QPS01-100-TSN-001-A     | Temperature Sensor (Cernox Thermometer)              | [Number] | Each            | To be attached at key points. (See Figure 3.2.1.1) (Mounted in the Chamber)                                |
+| QPS01-100-VIB-001-A     | Vibration Isolators (Mounting)                | [Number] | Each            | (See Figure 3.2.1.1). Elastomeric material, tuned for minimal vibration transmission.                                 |
+| [Add additional QSM components as needed] | | | | |
+
+#### 3.2.2 TMS-QSM - Thermal Management System (for QSM Zone)
+
+##### 3.2.2.1 Location and Description
+
+The TMS-QSM (Thermal Management System) is responsible for maintaining the cryogenic environment required for the QSM’s operation. The key components, as detailed below, are housed within Zone 100, in close proximity to the QSM. This ensures minimal thermal losses and enables efficient cooling of the sensitive QSM components. (For more detail refer to QPS-01 System Description, Section 2.1)
+
+##### 3.2.2.2. Exploded View Diagram (Figure 3.2.2.1)
+
+*   **(Placeholder: Exploded View Diagram of TMS-QSM Components. This should show the primary TMS components for Zone 100, including the Cryogenic Refrigerator Unit, heat exchangers, and coolant lines. The diagram should include callouts for each part, with reference numbers that correspond to the Part List in Table 3.2.2.1.)  Show the coolant flow and label key elements (Heater, sensor).**
+
+##### 3.2.2.3. Detailed Parts List (Table 3.2.2.1)
+
+| Part Number             | Description                                                  | Quantity | Unit of Measure | Remarks                                                               |
+| :---------------------- | :----------------------------------------------------------- | :------- | :-------------- | :-------------------------------------------------------------------- |
+| QPS01-100-CRU-001-A     | Cryogenic Refrigerator Unit (CRU - QSM Specific)            | 1        | Each            |  (See Figure 3.2.2.1) - Dilution Refrigerator. Requires [Specify Voltage and power].                                  |
+| QPS01-100-HX-001-A     | Heat Exchanger (QSM-Specific)                              | [Number] | Each            | (See Figure 3.2.2.1) Material: High Purity Copper with vacuum connections.                            |
+| QPS01-100-PMP-001-A     | Cryo-Coolant Pump (QSM)                                  | [Number] | Each            | For coolant circulation (see Figure 3.2.2.1) - Redundant Pumps.                           |
+| QPS01-100-CL-001-A      | Cryogenic Coolant Lines (e.g., Helium)                        | [Length]  | Meter           | (See Figure 3.2.2.1). Vacuum-jacketed tubing with cryogenic insulation.                      |
+| QPS01-100-TSN-002-A     | Temperature Sensor (For TMS, Cryogenic)                    | [Number] | Each            | (See Figure 3.2.2.1) (Cernox or Ruthenium Oxide).                                 |
+| [Add additional TMS-QSM components as needed] | | | | |
+
+#### 3.2.3 VAC-SYS-QSM - Vacuum System (for QSM Zone)
+
+##### 3.2.3.1 Location and Description
+
+The VAC-SYS-QSM (Vacuum System) is the vacuum system dedicated to the Quantum State Modulator (QSM). It creates and maintains the ultra-high vacuum within the Quantum Entanglement Chamber (QEC), preventing external interference with the entangled quantum state. The Vacuum Pump Unit, associated vacuum gauges, and controls are all contained within the QSM Zone. (See Section 2.1 of the system description)
+
+##### 3.2.3.2. Exploded View Diagram (Figure 3.2.3.1)
+
+*   **(Placeholder: Exploded View Diagram of VAC-SYS-QSM Components. This should show the Vacuum Pumps, gauges, valves, and the routing of vacuum lines. Include callouts for each part, with reference numbers that correspond to the Part List in Table 3.2.3.1.)  Show the vacuum connection to the QSM.**
+
+##### 3.2.3.3. Detailed Parts List (Table 3.2.3.1)
+
+| Part Number               | Description                                                 | Quantity | Unit of Measure | Remarks                                                                 |
+| :------------------------ | :---------------------------------------------------------- | :------- | :-------------- | :---------------------------------------------------------------------- |
+| QPS01-100-VAC-PMP-001-A     | Vacuum Pump (Turbomolecular Pump)                         | 1       | Each            |  (See Figure 3.2.3.1) - High Vacuum. Requires [Specify Voltage and power]                                    |
+| QPS01-100-VAC-GAU-001-A    | Vacuum Gauge (Ionization Gauge)                            | 1       | Each            | For measurement of the vacuum (see Figure 3.2.3.1) - UHV.  |
+| QPS01-100-VAC-VLV-001-A    | Vacuum Valve (Gate valve)                                  | 1       | Each            | For isolation of the QEC (see Figure 3.2.3.1). Pneumatic Actuation.          |
+| QPS01-100-VAC-LINE-001-A    | Vacuum Line (Tubing)                                       | [Length]  | Meter           | Flexible tubing used for vacuum (see Figure 3.2.3.1). Vacuum rated.                  |
+| [Add additional VAC-SYS-QSM components as needed] | | | | |
+
+### 3.3 Zone 200: Central Control and Power Zone
+
+This zone is responsible for housing the Flight-Adaptive Digital Engine Control (FADEC), Power Supply & Distribution units (PSUs and PDUs), and data and communication interfaces. The Zone 200 structure is built to minimize noise, thermal, and mechanical stresses on its components.
+
+#### 3.3.1 FADEC - Flight-Adaptive Digital Engine Control Module
+
+##### 3.3.1.1. Location and Description
+
+The FADEC (Flight-Adaptive Digital Engine Control) Module is located within Zone 200. This module houses the central AI-driven control system, which manages and optimizes the QPS-01 engine's operation. The module is mounted on a vibration-dampened rack, and the design facilitates easy access to all connections.
+
+##### 3.3.1.2. Exploded View Diagram (Figure 3.3.1.1)
+
+*   **(Placeholder: Exploded View Diagram of FADEC Module. This should show the processing units, sensor interfaces, actuator interfaces, and software modules. The diagram should include callouts for each part, with reference numbers that correspond to the Part List in Table 3.3.1.1.)  The diagram should include the internal details of the processing and control logic, as well as show the interfaces for communication with other parts of the system.**
+
+##### 3.3.1.3. Detailed Parts List (Table 3.3.1.1)
+
+| Part Number             | Description                                           | Quantity | Unit of Measure | Remarks                                                                           |
+| :---------------------- | :---------------------------------------------------- | :------- | :-------------- | :-------------------------------------------------------------------------------- |
+| QPS01-200-FAD-001-A     | FADEC Processing Unit (CPU) - Redundant               | 3        | Each            | (See Figure 3.3.1.1). [Specify Processor type - e.g., "Radiation-hardened, multi-core processor"]. Each CPU has its own cooling system.                              |
+| QPS01-200-FAD-002-A     | FADEC Data Acquisition Unit (DAU)                    | 1        | Each            | (See Figure 3.3.1.1). High-speed data acquisition. Interfaces to all sensors, (Analog and Digital).    |
+| QPS01-200-FAD-003-A     | FADEC Actuator Interface Module (AIM)                 | 1        | Each            | (See Figure 3.3.1.1). Control signals to QEE, QSM and TVM.                        |
+| QPS01-200-FAD-004-A     | Quantum State Detector Interface (QSDI)               | 1        | Each            | (See Figure 3.3.1.1). Interfacing with the Quantum State Detectors.                |
+| QPS01-200-FAD-005-A     | AI Software Module (Pre-loaded, Secure)                | 1        | Each            | (See Figure 3.3.1.1). [Specify AI algorithm types, if possible, e.g., ' Deep Reinforcement Learning']  |
+| [Add additional FADEC module components as needed] | | | | |
+
+#### 3.3.2 PSU - Power Supply Units (Zone 200 Specific)
+
+##### 3.3.2.1 Location and Description
+
+The Power Supply Units (PSUs) are located within the Zone 200, providing regulated power to the FADEC and associated Zone 200 components. These units convert power from the aircraft's main power bus into the appropriate voltages and currents.
+
+##### 3.3.2.2. Exploded View Diagram (Figure 3.3.2.1)
+
+*   **(Placeholder: Exploded View Diagram of Power Supply Unit. Show the key internal components, including the power converter, filtering components, and protection circuits. The diagram should include callouts for each part, with reference numbers that correspond to the Part List in Table 3.3.2.1.) Also show the power input connectors and outputs.**
+
+##### 3.3.2.3. Detailed Parts List (Table 3.3.2.1)
+
+| Part Number             | Description                                    | Quantity | Unit of Measure | Remarks                                                                     |
+| :---------------------- | :--------------------------------------------- | :------- | :-------------- | :-------------------------------------------------------------------------- |
+| QPS01-200-PWR-001-A     | DC-DC Power Converter (48VDC Output)           | 1        | Each            | (See Figure 3.3.2.1) - High Efficiency.  Input from main power bus and provides 48VDC for components in Zone 200                              |
+| QPS01-200-PWR-002-A     | DC-DC Power Converter (±15VDC Output)          | 1        | Each            | (See Figure 3.3.2.1) For analog components and sensor power supply.                                   |
+| QPS01-200-PWR-003-A     | Power Filter (EMI)                             | 1        | Each            | (See Figure 3.3.2.1) Common-mode and differential-mode filtering.                  |
+| QPS01-200-PWR-004-A     | Overcurrent Protection (Fuse)                  | [Number] | Each            | (See Figure 3.3.2.1) Protects the system from current overloads.                     |
+| QPS01-200-PWR-005-A     | Overvoltage Protection (TVS Diode)             | [Number] | Each            | (See Figure 3.3.2.1) Protects against voltage surges.                        |
+| [Add additional PSU components as needed] | | | | |
+
+#### 3.3.3 PDU - Power Distribution Units (Zone 200 Specific)
+
+##### 3.3.3.1 Location and Description
+
+The Power Distribution Units (PDUs) are contained within Zone 200, providing regulated power to the FADEC subunits and other engine systems.
+
+##### 3.3.3.2. Exploded View Diagram (Figure 3.3.3.1)
+
+*   **(Placeholder: Exploded View Diagram of Power Distribution Unit, PDUs. Show the key internal components, including the power distribution board and load switches. The diagram should include callouts for each part, with reference numbers that correspond to the Part List in Table 3.3.3.1.) Include Input and output connectors for easy identification.**
+
+##### 3.3.3.3. Detailed Parts List (Table 3.3.3.1)
+
+| Part Number             | Description                                  | Quantity | Unit of Measure | Remarks                                                                              |
+| :---------------------- | :------------------------------------------- | :------- | :-------------- | :----------------------------------------------------------------------------------- |
+| QPS01-200-PDU-001-A     | Power Distribution Board                    | 1        | Each            | (See Figure 3.3.3.1). The board provides the internal connections for all power from the PSUs to the various components.   |
+| QPS01-200-PDU-002-A     | Load Switch (Solid State)                     | [Number] | Each            | (See Figure 3.3.3.1). Controlled by FADEC. Used to selectively enable or disable power to individual components.                                            |
+| QPS01-200-PDU-003-A     | Power Connector (Input)                     | 1        | Each            | (See Figure 3.3.3.1). Provides power input from the PSUs. [Specify connector type, and pin outs].             |
+| QPS01-200-PDU-004-A     | Power Connector (Output)                      | [Number] | Each            | (See Figure 3.3.3.1). Supplies power to various FADEC components. [Specify connector type, and pin outs].          |
+| [Add additional PDU components as needed] | | | | |
+
+#### 3.3.4 CLG-SYS-ELEC - Cooling System (for Zone 200 Electronics)
+
+##### 3.3.4.1 Location and Description
+
+The Cooling System is located within Zone 200 to remove heat generated by the FADEC, PSUs, and other electronic components.
+
+##### 3.3.4.2. Exploded View Diagram (Figure 3.3.4.1)
+
+*   **(Placeholder: Exploded View Diagram of Cooling System Components. This should depict the Cooling Pump (if present), heat exchangers, heat transfer media (e.g., liquid coolant), and any heat sinks. Include callouts for each part, with reference numbers that correspond to the Part List in Table 3.3.4.1.) Show the coolant flow, and heat transfer points.**
+
+##### 3.3.4.3. Detailed Parts List (Table 3.3.4.1)
+
+| Part Number             | Description                                                 | Quantity | Unit of Measure | Remarks                                                                              |
+| :---------------------- | :---------------------------------------------------------- | :------- | :-------------- | :----------------------------------------------------------------------------------- |
+| QPS01-200-CLG-001-A     | Coolant Pump (for Zone 200)                                   | 1       | Each            | (See Figure 3.3.4.1).  High-reliability pump circulating coolant through the heat exchange loops in Zone 200.
+| QPS01-200-CLG-002-A     | Heat Exchanger (Zone 200 - Electronics)                      | [Number] | Each            | (See Figure 3.3.4.1). Efficiently transfer heat from the electronics to the coolant. |
+| QPS01-200-CLG-003-A     | Coolant Lines (Piping)                                         | [Length]  | Meter           | (See Figure 3.3.4.1).  Durable flexible lines for coolant circulation. (Material: [Material to be specified])         |
+| QPS01-200-CLG-004-A     | Radiator (Zone 200)                                        | 1       | Each            |  (See Figure 3.3.4.1).  Heat is rejected to the environment or a heat sink.
+| [Add additional cooling components as needed] | | | | |
+
+#### 3.3.5 DAC-INT - Data and Communication Interfaces (Zone 200)
+
+##### 3.3.5.1 Location and Description
+
+The Data and Communication Interfaces are located within Zone 200. These components provide the electrical and logical connections for the FADEC to receive data from the aircraft and send control signals back, as well as a connection to the maintenance computer for diagnostics and data logging.
+
+##### 3.3.5.2. Interface Diagram (Figure 3.3.5.1)
+
+*   **(Placeholder: Interface Diagram for Data and Communication. Show connections between the FADEC, aircraft systems (avionics, flight control), and the Maintenance Computer. The diagram should depict the different data buses and physical connectors involved. Include the type of connections (e.g., Serial, Ethernet, or MIL-STD-1553; number of pins, and relevant wire colors).**
+
+##### 3.3.5.3. Detailed Parts List (Table 3.3.5.1)
+
+| Part Number                 | Description                                                         | Quantity | Unit of Measure | Remarks                                                                   |
+| :-------------------------- | :------------------------------------------------------------------ | :------- | :-------------- | :------------------------------------------------------------------------ |
+| QPS01-200-INT-001-A        | MIL-STD-1553 Data Bus Interface (Connector and Module)                 | 1        | Each            | (See Figure 3.3.5.1). Connector (Type and number of pins) and the Interface Module                         |
+| QPS01-200-INT-002-A        | Ethernet Interface Connector                                        | 1        | Each            | (See Figure 3.3.5.1). Provides communication with a maintenance computer. [Specify connector and pinouts]. |
+| QPS01-200-INT-003-A        | Discrete I/O Interface (Connector and Module)                        | 1        | Each            | (See Figure 3.3.5.1). For discrete signals to/from the aircraft (e.g., engine start, alarms).     |
+| [Add additional Data and Communication interface components as needed] | | | | |
+
+---
+
+### 3.4 Zone 300: Aft Thermal Management Zone
+
+This zone is the location of the QEE and associated components.
+
+#### 3.4.1 QEE - Quantum Energy Extractor
+
+##### 3.4.1.1. Location and Description
+
+The QEE (Quantum Energy Extractor) is located within Zone 300. The QEE is the core of the thrust-generation system, converting quantum energy into directed momentum. The specific configuration and physical layout of the QEE depend on the precise method employed for energy extraction and momentum transfer. (Consult Section 2.1 for the QEE principle of operation)
+
+##### 3.4.1.2. Exploded View Diagram (Figure 3.4.1.1)
+
+*   **(Placeholder: Exploded View Diagram of QEE. Show the Energy Extraction Unit (EEU), Thrust Conversion Unit (TCU), Thrust Vectoring Mechanism (TVM - if applicable), and sensor suite. Call out all parts with reference numbers corresponding to Table 3.4.1.1)**
+
+##### 3.4.1.3. Detailed Parts List (Table 3.4.1.1)
+
+| Part Number             | Description                                 | Quantity | Unit of Measure | Remarks                                                        |
+| :---------------------- | :------------------------------------------ | :------- | :-------------- | :------------------------------------------------------------- |
+| QPS01-300-QEE-001-A     | QEE Main Housing (External Casing)          | 1        | Each            | Material: [Specify material – e.g., High-strength alloy]  (See Figure 3.4.1.1) |
+| QPS01-300-EEU-001-A     | Energy Extraction Unit                      | 1        | Each            |  (See Figure 3.4.1.1) Contains the energy conversion components.                                                                 |
+| QPS01-300-TCU-001-A     | Thrust Conversion Unit (TCU)          | 1        | Each            |  (See Figure 3.4.1.1) Converts the extracted energy to thrust. (Material – e.g. "High-temperature alloy")                                                               |
+| QPS01-300-TVM-001-A     | Thrust Vectoring Mechanism (TVM - if applicable) | 1        | Each            | (See Figure 3.4.1.1).  [Note: If a TVM is not used, specify "N/A" and then, a description.]                                                                           |
+| QPS01-300-TST-001-A     | Thrust Sensor                             | [Number] | Each            | (See Figure 3.4.1.1)  Type: [Piezoelectric/Strain Gauge].                  |
+| QPS01-300-TSN-003-A     | Temperature Sensor (QEE)                      | [Number] | Each            | (See Figure 3.4.1.1) (Thermocouple, RTD)                                      |
+| QPS01-300-SEN-001-A     | Sensor Suite (Pressure sensors)                | [Number] | Each            | (See Figure 3.4.1.1) Monitor pressure, and vacuum performance |
+
+#### 3.4.2 TMS-Main - Thermal Management System (Main Cryogenic System)
+
+##### 3.4.2.1 Location and Description
+
+The TMS-Main (Thermal Management System) provides the cryogenic cooling for the QEE, and possibly for portions of the QSM, if needed. The TMS-Main also provides cooling to the FADEC as needed. It contains the CRU (Cryogenic Refrigerator Unit), heat exchangers, coolant pumps, and cryogenic coolant storage. (Refer to Section 2.1 of the system description for general information on the TMS.)
+
+##### 3.4.2.2. Exploded View Diagram (Figure 3.4.2.1)
+
+*   **(Placeholder: Exploded View Diagram of the TMS-Main Components. This should show the CRU, heat exchangers, pumps, coolant lines, and cryogenic storage tanks. Include callouts for each part, with reference numbers that correspond to Table 3.4.2.1)**
+
+##### 3.4.2.3. Detailed Parts List (Table 3.4.2.1)
+
+| Part Number             | Description                                                  | Quantity | Unit of Measure | Remarks                                                               |
+| :---------------------- | :----------------------------------------------------------- | :------- | :-------------- | :-------------------------------------------------------------------- |
+| QPS01-300-CRU-001-A     | Cryogenic Refrigerator Unit (CRU - Main)            | 1        | Each            | (See Figure 3.4.2.1) - [Specify CRU type, e.g., "Pulse Tube"]                                  |
+| QPS01-300-HX-002-A     | Heat Exchanger (QEE)                              | [Number] | Each            | (See Figure 3.4.2.1) Cools the QEE and, if appropriate, the QSM.                           |
+| QPS01-300-PMP-002-A     | Cryo-Coolant Pump (for the QEE and other components) | [Number] | Each            | For coolant circulation (see Figure 3.4.2.1).  Redundant Pumps.                           |
+| QPS01-300-CL-002-A      | Cryogenic Coolant Lines (e.g., Helium)                        | [Length]  | Meter           | (See Figure 3.4.2.1). Vacuum-jacketed tubing with cryogenic insulation.                      |
+| QPS01-300-RAD-001-A    | Radiator Panels for Heat Rejection                       | [Number] | Each            |  (See Figure 3.4.2.1). Radiates excess heat to the external environment or to a heat sink.
+| QPS01-300-CST-001-A    | Cryogenic Storage Tanks (Helium)                         | [Number] | Each            | (See Figure 3.4.2.1)  Stored under pressure.  The amount will be in liters or kg.                         |
+| QPS01-300-TSN-004-A     | Temperature Sensor (TMS-Main)                    | [Number] | Each            |  (See Figure 3.4.2.1) (e.g. "Temperature sensor: Platinum RTD")                         |
+
+---
+
+### 3.5 SUP-SYS - Support Systems (General, Engine-Level)
+
+#### 3.5.1 QFS - Quantum Field Sensors (Distributed Sensors)
+
+##### 3.5.1.1 Location and Description
+
+The Quantum Field Sensors (QFS) are strategically located throughout the QPS-01 engine to provide real-time data on the engine's performance and the state of the quantum systems. The specific location of the QFS sensors can vary. (See Section 2.1 and 2.2 of the system description). The data from these sensors is sent to the FADEC, and they are critical.
+
+##### 3.5.1.2. Exploded View Diagram (Figure 3.5.1.1)
+
+*   **(Placeholder: Diagram of the QFS sensors. This should show the location of the major sensor types on the engine, such as those that are on the QSM, QEE, etc. This may be a schematic diagram or a callout diagram that indicates locations by zone. Include key locations of sensor types.**
+
+##### 3.5.1.3. Detailed Parts List (Table 3.5.1.1)
+
+| Part Number             | Description                                                  | Quantity | Unit of Measure | Remarks                                                           |
+| :---------------------- | :----------------------------------------------------------- | :------- | :-------------- | :---------------------------------------------------------------- |
+| QPS01-SUP-QFS-001-A     | Quantum State Detector (QSM)                       | [Number]        | Each            | (See Figure 3.5.1.1). For measurement of the Quantum state.                          |
+| QPS01-SUP-QFS-002-A     | Thrust Sensor (QEE)                         | [Number]        | Each            | (See Figure 3.5.1.1) - Located to measure thrust.                           |
+| QPS01-SUP-QFS-003-A     | Temperature Sensor (Various - Throughout Engine)                    | [Number]        | Each            | (See Figure 3.5.1.1) (Thermocouple, RTD) Mounted in each zone.                      |
+| QPS01-SUP-QFS-004-A     | Pressure Transducer (Various – Throughout Engine)                        | [Number]        | Each            | (See Figure 3.5.1.1).  -  Located at various points in the vacuum or coolant systems to measure pressure, and/or in any other relevant locations.      |
+| QPS01-SUP-QFS-005-A     | Electromagnetic Field Sensor                         | [Number]        | Each            | (See Figure 3.5.1.1).  -  Used for detecting electromagnetic fields in the QSM and QEE.  |
+| [Add additional QFS components as needed] | | | | |
+
+#### 3.5.2 CAB-Harness - Main Cabling Harnesses (Engine-Level)
+
+##### 3.5.2.1 Location and Description
+
+The main cabling harnesses are responsible for distributing power, data, and control signals throughout the entire QPS-01 engine. The engine uses zone specific cabling. The main harnesses are routed along the engine frame, and connect to Zone 100, Zone 200, and Zone 300 via connectors. (See Section 2.1). This architecture provides a level of modularity and access for maintenance activities.
+
+##### 3.5.2.2. Wiring Diagram (Figure 3.5.2.1)
+
+*   **(Placeholder: A color-coded schematic illustrating major harness routes and connector interfaces.  Also include wire gauge, wire colors and any unique wire numbers for easy identification.)**
+
+##### 3.5.2.3. Detailed Parts List (Table 3.5.2.1)
+
+| Part Number                 | Description                                                        | Quantity | Unit of Measure | Remarks                                                                              |
+| :-------------------------- | :----------------------------------------------------------------- | :------- | :-------------- | :------------------------------------------------------------------------------------- |
+| QPS01-SUP-CAB-Main-001-A      | Main Power Harness                                                 | 1       | Each            | Connects to the aircraft power supply and distributes power to Zone 200 (Power Supply) (See Figure 3.5.2.1)                              |
+| QPS01-SUP-CAB-Zone100-001-A   | Zone 100 Cabling Harness                                         | 1       | Each            | Provides the power and signal connections for all components within Zone 100 (QSM)   (See Figure 3.5.2.1).  [Specify wire gauge and wire colors].
+| QPS01-SUP-CAB-Zone200-001-A   | Zone 200 Cabling Harness                                         | 1       | Each            | Provides the power and signal connections for all components within Zone 200 (FADEC, Power, etc.) (See Figure 3.5.2.1) [Specify wire gauge and wire colors]                                  |
+| QPS01-SUP-CAB-Zone300-001-A   | Zone 300 Cabling Harness                                         | 1       | Each            | Provides the power and signal connections for all components within Zone 300 (QEE, TMS).  (See Figure 3.5.2.1)  [Specify wire gauge and wire colors]                             |
+| QPS01-SUP-CAB-Signal-001-A    | Data Bus Cables (MIL-STD-1553)                       |  [Length]    | Each            | (See Figure 3.5.2.1) Provides data communication with the aircraft systems   |
+| [Add additional CAB-Harness components as needed] | | | | |
+
+---
+That is the complete IPB.
+```
 
