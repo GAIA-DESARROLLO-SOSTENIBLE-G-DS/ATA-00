@@ -233,97 +233,34 @@ The following text-based mermaid diagram illustrates the flow of energy, data, a
 
 ```mermaid
 flowchart TB
-    subgraph Aircraft Power System
-        A1[Aircraft Power Bus]
+    subgraph "Aircraft Power System"
+        A1["Aircraft Power Bus"]
     end
 
-    subgraph Power Supply & Distribution
-        B1[Power Converters]
-        B2[PDUs]
-        B3[Circuit Protection]
+    subgraph "Power Supply & Distribution"
+        B1["Power Converters"]
+        B2["PDUs"]
+        B3["Circuit Protection"]
         B1 --> B2
-        B2 --> B3
     end
 
     A1 --> B1
-    B3 -- Power --> QSM
-    B3 -- Power --> QEE
     B3 -- Power --> FADEC
-    B3 -- Power --> TMS
-    B3 -- Power --> Vacuum System
-
-    subgraph QSM
-        C1[Q.E. Chamber\n(Vacuum, Shielding)]
-        C2[Quantum Particle Source]
-        C3[Magnetic Field Generators]
-        C4[QSM Control Elec.]
-        C5[Shielding]
-        C6[Temp Sensors (QSM)]
-        C1 -- "Entangled Quantum State" --> QEE
-        C6 -- QSM Temp Data --> FADEC
-    end
-
-    subgraph QEE
-        D1[Energy Extraction Mechanism]
-        D2[Thrust Conversion Unit (TCU)]
-        D3[Thrust Vectoring Mechanism (TVM)]
-        D4[QEE Sensors]
-        D2 -- Thrust Output (Vector) --> Output
-        D4 -- QEE Performance Data --> FADEC
-        D1 -- Control Signals --> FADEC
-        D1 -- Heat --> TMS
-    end
+    B3 -- Power --> QSM
 
     subgraph FADEC
-        E1[Proc. Core (Redundant)]
-        E2[Data Acq. Sys.]
-        E3[Actuator Interface]
-        E4[AI Software]
-        E5[Data Interfaces]
-        E1 -- Power Mgt Control --> B3
-        E1 -- QEE Control Signals --> QEE
-        E1 -- QSM Control Signals --> QSM
-        E1 -- TMS Control Signals --> TMS
-        E2 -- Sensor Data --> E1
-        E5 -- Pilot Commands --> E1
-        E5 -- Flight Conditions, Nav Data --> E1
-        E1 -- QPS-01 Status, Warnings --> Output
-        E1 -- Maintenance Log Data --> Output
+        E1["Proc. Core (Redundant)"]
     end
 
-    subgraph TMS
-        G1[Cryogenic Refrigerator]
-        G2[Heat Exchangers]
-        G3[Coolant Loops]
-        G4[Cryogenic Pumps]
-        G5[Radiators/Heat Sink]
-        G5 -- Heat Rejection --> Output
-        G1 -- Coolant Flow --> QSM
-        G1 -- Coolant Flow --> QEE
-        G1 -- Coolant Flow --> FADEC
-        G1 -- Power for CRU, Pumps, Fans --> B3
-        G4 -- TMS Status Data, Temps, Flow Rates --> FADEC
+    subgraph QSM
+        C1["Q.E. Chamber\n(Vacuum, Shielding)"]
     end
 
-    subgraph Vacuum System
-        H1[QSM Chamber (Vac)]
-        H2[VPS]
-        H3[Vacuum Gauges]
-        H4[Vacuum Valves]
-        H1 -- Vacuum --> QSM
-        H3 -- Vacuum Pressure Data --> FADEC
-        H2 -- Power for Vacuum Pumps, Controls --> B3
-    end
+    E1 -- "Control Signals" --> QSM
+    C1 -- "Data Feedback" --> E1
 
-    QSM -- "Cryogenic Coolant IN" --> TMS
-    QEE -- "Coolant Flow" --> TMS
+    %% Ensure cycles are managed - Data Feedback could create loops if combined with Control Signals
 
-    FADEC --> B3
-
-    classDef component fill:#f9f,stroke:#333,stroke-width:2px
-    classDef subsystem fill:#ccf,stroke:#333,stroke-width:2px
-    class QSM,QEE,FADEC,TMS,Vacuum System subsystem
-    class B1,B2,B3,C1,C2,C3,C4,C5,C6,D1,D2,D3,D4,E1,E2,E3,E4,E5,G1,G2,G3,G4,G5,H1,H2,H3,H4 component
 ```
 
 **Legend:**  
